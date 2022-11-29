@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="">
+	<head>
+    	<title>Mycelium</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <link rel="shortcut icon" type="image/png" href="../../assets/mycelium/icons/hemlock.png">
+		<script src="../../js/mycelium/jquery.min.js"></script>
+		<link rel="stylesheet" href="../../css/mycelium/main.css" />
+		<link rel="stylesheet" href="../../css/mycelium/fonts.css" />
+		<link rel="stylesheet" href="../../css/mycelium/style.css" />
+		<link rel="stylesheet" href="../../css/mycelium/nav.css" />
+	</head>
+	<body class="is-preload">
+		<div id="container">
+			<div id="sidebar">
+				<aside class="col-xs-12 col-md-12 col-lg-3 side-menu">
+					<nav class="left-nav hidden-xs hidden-sm hidden-md">
+						<ul id="toc" >
+						</ul>
+					</nav>
+				</aside>
+			</div>
+			<div id="content">
+				<div id="main">
+					<div id="section_one_header"></div>
+					<div id="section_one_body"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/mycelium/jquery.min.js"></script>
+		<script src="../../js/mycelium/jquery.poptrox.min.js"></script>
+		<script src="../../js/mycelium/browser.min.js"></script>
+		<script src="../../js/mycelium/breakpoints.min.js"></script>
+		<script src="../../js/mycelium/util.js"></script>
+		<script src="../../js/mycelium/main.js"></script>
+		<script src="../../js/mycelium/parameters.js"></script>
+		<script src="../../js/mycelium/populate.js"></script>
+		<script src="../../js/mycelium/toc.js"></script>
+		<script>
+
+			//Add Table of Contents
+			toc = document.getElementById("toc");
+			for (let i = 0; i < toc_content.length; i++) {
+				let new_ul = document.createElement("ul");
+				new_ul.innerHTML = toc_content[i];
+				toc.appendChild(new_ul);
+			}
+
+			//Populate Content
+			filename = "../../markdown/mycelium/001.md";
+			section_header = document.getElementById("section_one_header");
+			section_body = document.getElementById("section_one_body");
+			populate()
+
+		</script>
+		<script>
+
+			$('.side-menu li').on('click', 'a', function(e){
+			    if ($(this).parent().children('ul').length){
+					e.preventDefault();
+					$(this).addClass('active');
+					$(this).parent().children('ul').slideDown();
+					setTimeout(function(){
+					  $.fn.matchHeight._update();
+					  $.fn.matchHeight._maintainScroll = true;
+					}, 1000);
+				}
+			  });
+
+			  $('.side-menu li').on('click', 'a.active', function(e){
+			    e.preventDefault();
+			    $(this).removeClass('active');
+				$(this).parent().children('ul').slideUp();
+			    setTimeout(function(){
+			      $.fn.matchHeight._update();
+			      $.fn.matchHeight._maintainScroll = true;
+			    }, 1000);
+			  });
+
+		</script>
+	</body>
+</html>
