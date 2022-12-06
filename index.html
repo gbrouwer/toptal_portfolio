@@ -1,57 +1,100 @@
-<!DOCTYPE HTML>
-<html lang="">
-	<head>
-    	<title>Mycelium</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	    <link rel="shortcut icon" type="image/png" href="./assets/samson/icons/samson.png">
-		<script src="./js/mycelium/jquery.min.js"></script>
-		<link rel="stylesheet" href="./css/samson/index.css" />
-	</head>
-	<body class="is-preload">
-		<div>
-			<span><span></span></span>
-				<h5 class="center" id="title"></h5>
-			<div class="wrap">
-			  <a onmouseover="changeDestination(1)" href="./html/samson/bio.html"><div></div></a>
-			  <a onmouseover="changeDestination(2)" href="./html/samson/index.html"><div></div></a>
-			  <a onmouseover="changeDestination(3)" href="./html/solarium/library.html"><div></div></a>
-			  <a onmouseover="changeDestination(4)" href="./html/mycelium/chapter_001.html"><div></div></a>
-			  <a onmouseover="changeDestination(5)" href="./html/mycelium/chapter_001.html"><div></div></a>
-			</div>
-		</div>
-	</body>
-	<script>
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" type="image/png" href="./assets/icons/solarium.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+    <link rel="stylesheet" href="../css/library_style_2.css">
+  </head>
+  <body>
+  <div style="height:50px; background-color:#fff"></div>
+    <h1 class="author">Personal <a href="" target="_blank">Portfolio</a></h1>
+    <div height="100px">
+      <h1 style="font-size:16px; color: #000" id="topic" class="author">Select Portfolio Item</h1>
+    </div>
 
-		function changeDestination(pageno) {
-			let element = document.getElementById("title")
-			if (pageno === 1) {
-				element.margin = "5%";
-				element.top = "5%";
-				element.innerHTML = "<br>Bio"
-			}
-			if (pageno === 5) {
-				element.margin = "5%";
-				element.top = "5%";
-				element.innerHTML = "<br>Data Science Course"
-			}
-			if (pageno === 3) {
-				element.margin = "5%";
-				element.top = "5%";
-				element.innerHTML = "<br>Library"
-			}
-			if (pageno === 4) {
-				element.margin = "5%";
-				element.top = "5%";
-				element.innerHTML = "<br>Data Science Course Low Resolution"
-			}
-			if (pageno === 2) {
-				element.margin = "5%";
-				element.top = "5%";
-				element.innerHTML = "<br>Catnip Project"
-			}
-		}
+    <nav class="circular-menu">
+      <div class="circle">
 
-	</script>
+        <a style="font-size:64px"; href="html/d4d.html">
+          <img id="1" onmouseenter="bigImg1(this)" onmouseleave="normalImg(this)" width=64 src="./assets/icons/senegal.png" alt="d4d"></a>
+
+        <a style="font-size:64px"; href="html/causality.html">
+          <img id="2" onmouseenter="bigImg2(this)" onmouseleave="normalImg(this)" width=64 src="./assets/icons/causality.png" alt="causality"></a>
+
+        <a style="font-size:64px"; href="html/content.html">
+          <img id="3" onmouseenter="bigImg3(this)" onmouseleave="normalImg(this)" width=64 src="./assets/icons/content.png" alt="content"></a>
+
+        <a style="font-size:64px"; href="https://samsonlikescatnip.com/html/mycelium/chapter_001.html">
+          <img id="4" onmouseenter="bigImg4(this)" onmouseleave="normalImg(this)" width=64 src="assets/icons/datascience_course.png" alt="datascience"></a>
+
+        <a style="font-size:64px"; href="html/samson.html">
+          <img id="5" onmouseenter="bigImg5(this)" onmouseleave="normalImg(this)" width=64 src="./assets/icons/samson.png" alt="samson"></a>
+
+        <a style="font-size:64px"; href="html/library.html">
+          <img id="6" onmouseenter="bigImg6(this)" onmouseleave="normalImg(this)" width=64 src="./assets/icons/library.png" alt="library"></a>
+
+        <a style="font-size:64px"; href="html/source_separation.html">
+          <img id="7" onmouseenter="bigImg7(this)" onmouseleave="normalImg(this)" width=64 src="./assets/icons/soundscapes.png" alt="soundscapes"></a>
+
+        <a style="font-size:64px"; href="html/voice_synthesis.html">
+          <img id="8" onmouseenter="bigImg8(this)" onmouseleave="normalImg(this)" width=64 src="assets/icons/voice_synthesis.png" alt="voice_synthesis"></a>
+
+        <a style="font-size:64px"; href="html/medical_augmented_reality.html">
+          <img id="8" onmouseenter="bigImg9(this)" onmouseleave="normalImg(this)" width=64 src="./assets/icons/medical_augmented_reality.png" alt="medical_augmented_reality"></a>
+
+      </div>
+      <a href="" class="menu-button fa fa-bars fa-2x"></a>
+    </nav>
+      <script>
+
+        function bigImg1(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "D4D";
+        }
+        function bigImg2(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "Causality";
+        }
+        function bigImg3(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "Questionable Content";
+        }
+        function bigImg4(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "Datascience Course (In progress...)";
+        }
+        function bigImg5(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "Samson";
+        }
+        function bigImg6(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "Libary";
+        }
+        function bigImg7(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "Soundscapes";
+        }
+        function bigImg8(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "Voice synthesis";
+        }
+        function bigImg9(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "Medical augmented reality";
+        }
+        function normalImg(x) {
+          const elem = document.getElementById("topic");
+          elem.innerHTML = "Select Portfolio Item...";
+        }
+
+      </script>
+      <script src="../js/library_script_2.js"></script>
+  </body>
 </html>

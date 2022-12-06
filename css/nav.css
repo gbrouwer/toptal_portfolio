@@ -1,0 +1,84 @@
+.no-bullets {
+    list-style-type: none;
+    background-color: #000;
+    color: #000;
+}
+li {
+    color: #000;
+
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none !important;
+    color: #0ff;
+    font-size: 2.8rem;
+}
+aside nav.left-nav {
+    list-style-type: none;
+    background-color: #fff;
+    color: #00f;
+}
+aside nav.left-nav ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+    color: #00f;
+}
+aside nav.left-nav ul li {
+    list-style-type: none;
+    font-size: 0.8rem;
+    color: #f00;
+    padding: 0
+}
+.image-container {
+  background: #f00 !important;
+  text-align: center;
+  padding: 1rem 0;
+}
+aside nav.left-nav ul li.nolistHighlight {
+    list-style-type: none;
+    background-color: #1fdfef;
+    color: #000;
+    text-decoration: none
+}
+aside nav.left-nav ul li.nolistHighlight a {
+    list-style-type: none;
+    background-color: #000;
+    color: #ff0000;
+}
+aside nav.left-nav ul li a {
+    list-style-type: none;
+    color: #000;
+    font-weight: 300;
+    display: block;
+    padding: 0.5rem;
+    padding-left: 0.10rem;
+    font-size: 1.00rem;
+}
+aside nav.left-nav ul li a:hover {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none
+}
+aside nav.left-nav ul li ul {
+    color: #000;
+    display: none;
+    background-color: #fff;
+    padding-bottom: 1.00rem
+}
+aside nav.left-nav ul li ul li a {
+    color: #0f0;
+    font-size: 1rem;
+    font-weight: 100;
+    padding-left: 50px;
+    padding-bottom: initial
+}
+aside nav.left-nav ul li ul li a.active {
+    background-color: #000;
+    color: #0f0;
+    padding-bottom: 0.25rem
+}
+aside nav.left-nav ul li ul li a:hover {
+    color: #0f0;
+    background-color: #fff;
+}
