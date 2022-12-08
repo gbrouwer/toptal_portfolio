@@ -700,47 +700,54 @@ function populate() {
 
                 //Image
                 if (text_type_str === "#it") {
-                    tbl = document.createElement("table");
+                    let filename = parameters[0];
+                    tbl = document.createElement("div");
                     tbl.style.width = "100%";
                     tblBody = document.createElement("tbody");
                     parameters = text.split(" ")
-                    let figure_name = document.createElement('strong')
-                    let caption_text = parameters.slice(3,5).join(' ')
-                    let text_node = document.createTextNode(caption_text + " ");
-                    let caption = document.createTextNode(parameters.slice(5).join(' '));
-                    let figure_caption = document.createElement('pc')
-                    figure_name.appendChild(text_node);
-                    figure_caption.appendChild(text_node);
-                    figure_caption.appendChild(caption);
-                    let cell_width = parseFloat(parameters[1])
-                    cell_width = 10;
-                    let filename = parameters[0];
-                    for (let r = 0; r < 1; r++) {
-                        row = document.createElement("tr");
-                        for (let c = 1; c < 2; c++) {
-                            let cell = document.createElement("td");
-                            cell.style.backgroundColor = "white";
-                            cell.style.textAlign = "center"
-                            if (c === 1 && r === 0) {
-                                cell.style.width = cell_width + "%"
-                                let img = document.createElement("img");
-                                img.src = filename
-                                img.style.height = parameters[2] + "pt";
-                                cell.appendChild(img);
-                            }
-                            if (c === 1) {
-                                cell.style.width = cell_width + "%"
-                                cell.style.width = "50%";
-                                if (r === 0) {
-                                    cell.style.textAlign = "left";
-                                }
-                            }
-                            row.appendChild(cell);
-                        }
-                        tblBody.appendChild(row);
+                    let img = document.createElement("img");
+                    img.src = filename
+                    img.style.height = parameters[2] + "pt";
+                    // img.style.height = "128pt";
+                    img.style.padding = "2%";
+                    if (filename.indexOf("logos") > -1) {
+                        section_body.appendChild(img);
                     }
-                    tbl.appendChild(tblBody);
-                    section_body.appendChild(tbl);
+
+                    // let caption_text = parameters.slice(3,5).join(' ')
+                    // let text_node = document.createTextNode(caption_text + " ");
+                    // let caption = document.createTextNode(parameters.slice(5).join(' '));
+                    // let figure_caption = document.createElement('pc')
+                    // figure_name.appendChild(text_node);
+                    // figure_caption.appendChild(text_node);
+                    // figure_caption.appendChild(caption);
+                    // let cell_width = parseFloat(parameters[1])
+                    // cell_width = 10;
+                    // for (let r = 0; r < 1; r++) {
+                    //     row = document.createElement("tr");
+                    //     for (let c = 1; c < 2; c++) {
+                    //         let cell = document.createElement("td");
+                    //         cell.style.backgroundColor = "white";
+                    //         cell.style.textAlign = "center"
+                    //         if (c === 1 && r === 0) {
+                    //             cell.style.width = cell_width + "%"
+                    //             let img = document.createElement("img");
+                    //             img.src = filename
+                    //             img.style.height = parameters[2] + "pt";
+                    //             cell.appendChild(img);
+                    //         }
+                    //         if (c === 1) {
+                    //             cell.style.width = cell_width + "%"
+                    //             cell.style.width = "50%";
+                    //             if (r === 0) {
+                    //                 cell.style.textAlign = "left";
+                    //             }
+                    //         }
+                    //         row.appendChild(cell);
+                    //     }
+                    //     tblBody.appendChild(row);
+                    // }
+                    // tbl.appendChild(tblBody);
                 }
 
             }
